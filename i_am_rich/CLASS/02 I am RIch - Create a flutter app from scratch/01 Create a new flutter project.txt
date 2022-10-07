@@ -1,0 +1,24 @@
+- 1 Inside android studio > Click on 'New Flutter Project'
+- 2 Give your project a name and select the location and also add description if the input is available and then click next.
+- 3 Type in your 'company domain' which will be used to uniquely identify this particular app on the app store >> So if you have a domain name, type it in reverse
+order.. e.g. com.cashboxng but if you do not have a domain, you can use your name e.g. michaelzakindiilete.com.. Make sure it will be unique.
+- 4 Click 'Finish' for android studio to create a project with a default counter app....
+
+
+CREATING OUR I AM RICH APP
+-1  Delete all the code inside the main.dart leaving what we have below
+
+// ignore_for_file: prefer_const_constructors
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp());
+}
+
+// Inside the runApp(), we have a MaterialApp() widget which allows us to create an app that conform
+ to material design.. It takes a 'home' argument which can be any widget..
+
+ CODE FORMATTING
+ * Whenever you are creating a widget that is a method e.g. Center(), Text(), always add a comma at
+ the end for dart to properly format your code
