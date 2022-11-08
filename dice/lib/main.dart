@@ -31,6 +31,22 @@ class DicePage extends StatefulWidget {
 class _DicePageState extends State<DicePage> {
   int leftDiceNumber = 2;
   int rightDiceNumber = 2;
+
+  // ds function updates both dices numbers.
+  // it is void because it doesnt return a value
+  void updateDice() {
+    /*    ds setState function updates the value of the 'leftDiceNumber' state*/
+    setState(() {
+      /*
+      Random().nextInt(5) will generate numbers from 0 -> 5
+      Random().nextInt(5) + 1 will generate numbers from 1 -> 6
+      Random().nextInt(100) + 50 will generate nos from 50 -> 150
+                     */
+      leftDiceNumber = Random().nextInt(5) + 1;
+      rightDiceNumber = Random().nextInt(5) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -43,29 +59,14 @@ class _DicePageState extends State<DicePage> {
             // event to it and we remove the padding we had earlier bcos the
             // TextButton comes with a padding by default
             child: TextButton(
-                onPressed: () {
-                  /*    ds setState function updates the value of the 'leftDiceNu
-                mber' state*/
-                  setState(() {
-                    /*
-                    Random().nextInt(5) will generate numbers from 0 -> 5
-                    Random().nextInt(5) + 1 will generate numbers from 1 -> 6
-                    Random().nextInt(100) + 50 will generate nos from 50 -> 150
-                     */
-                    leftDiceNumber = Random().nextInt(5) + 1;
-                  });
-                },
+                onPressed: updateDice,
                 // now we r using our 'leftDiceNumber' var to render a
                 // specific number of dice
                 child: Image.asset('images/dice$leftDiceNumber.png')),
           ),
           Expanded(
             child: TextButton(
-                onPressed: () {
-                  setState(() {
-                    rightDiceNumber = Random().nextInt(5) + 1;
-                  });
-                },
+                onPressed: updateDice,
                 child: Image.asset('images/dice$rightDiceNumber.png')),
           ),
         ],
