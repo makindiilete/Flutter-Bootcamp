@@ -1,0 +1,71 @@
+FLUTTER LAYOUT WIDGETS
+-   Single child layout widgets - This widget can only accept a single child e.g. If we pass a text
+widget inside a container, we cannot add another widget like another text inside the same container.
+
+-   Multi child layout widgets - This widget can accept multiple children e.g. Row widget can accept
+ many other widgets.
+
+Container: - A container widget is like a <div> </div> in web development which can be used to
+layout items.. It can be positioned, moved around and you can give it a child to display..
+
+By default, a container takes all the available space if it does not contain a child but when you
+give it a child, it shrinks to the size of the child/children
+....
+
+Containers with no children try to be as big as possible unless the incoming constraints are
+unbounded, in which case they try to be as small as possible. Containers with children size
+themselves to their children. The width, height, and constraints arguments to the constructor
+override this.
+
+
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body:
+            // SafeArea widget move our items away from the notch and navbar
+            SafeArea(
+          child:
+              // a container is like a div that can contain items
+              Container(
+            color: Colors.white,
+            // we can specify how big the container should be...
+            height: 100,
+            width: 100,
+            // EdgeInsets.all(20) - Sets 20px margin all around the container
+            // margin: EdgeInsets.all(20.0),
+
+            /*
+                EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0): -
+                used to set value for the vertical and horizontal margins of
+                the container...
+                */
+            // margin: EdgeInsets.symmetric(vertical: 100.0, horizontal: 25.0),
+
+            /*
+            EdgeInsets.fromLTRB(left, top, right, bottom) : - sets different
+            margin for the 4 sides i.e. d left, top, right and bottom
+            */
+            // margin: EdgeInsets.fromLTRB(10, 40, 50, 5),
+
+            // margin: EdgeInsets.only() will set margin only one or more side..
+            margin: EdgeInsets.only(left: 50, bottom: 60),
+            // adding padding to our container uses the same EdgeInsets
+            padding: EdgeInsets.all(20),
+            child: Text('Hello World'),
+          ),
+        ),
+      ),
+    );
+  }
+}

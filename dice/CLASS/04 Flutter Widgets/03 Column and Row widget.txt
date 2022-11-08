@@ -1,0 +1,8 @@
+Column and Row are multi children layout widget...
+
+COLUMN
+A Column widget arranges its children vertically, taking all the available vertical space and horizontally limits to the
+ maximum width of its children..
+
+*   The main axis of a column is vertical
+*   The cross axis of a column is horizontal

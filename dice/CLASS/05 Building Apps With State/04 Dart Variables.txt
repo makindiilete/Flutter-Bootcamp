@@ -1,0 +1,23 @@
+-   Dart is a static typed language but we can also make it dynamic i.e. to make a
+variable accept any type using either d 'dynamic' keyword or creating a variable with no
+default value
+
+// using 'dynamic'
+void main() {
+ dynamic a = "hello";
+   a = true;
+   print(a);
+}
+
+
+// Without default value
+void main() {
+ var a;
+   a = true;
+   a = 'hello'
+   print(a);
+}
+
+RECOMMENDATION : - Avoid using 'dynamic'/'var' data types in your code because it can lead
+to
+unexpected results

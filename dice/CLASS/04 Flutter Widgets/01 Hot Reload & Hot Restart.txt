@@ -1,0 +1,11 @@
+So far we always rebuild our app to see changes but with flutter hot reload, changes are suppossed
+to appear immediately but for hot reload and hot restart to work, our app needs to be inside either
+a STATELESS or a STATEFUL WIDGET.
+
+Hot reload only rebuilds the changes made.. All the data remains the same so you do not loose your
+progress e.g. if you are dealing with a form..
+
+Hot restart restarts the app so you loose the whole state.. but then it restarts faster than
+rebuilding the app manually...
+
+This concept works for both small and large app.. So size does not matter...

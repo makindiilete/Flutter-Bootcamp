@@ -1,0 +1,54 @@
+We will be using a custom google fonts named 'Pacifico' from https://fonts.google
+.com/specimen/Pacifico?query=paci.
+
+-   Create a new directory 'fonts'
+-   Drag your downloaded fonts and paste them inside the fonts directory
+-   Configure your 'pubspac.yaml' with your fonts and run >> pub get
+
+class MiCard extends StatelessWidget {
+  const MiCard({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.green,
+        body: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: NetworkImage('https://cdn.pixabay'
+                    '.com/photo/2015/01/15/13/06/woman-600238_1280.jpg'),
+              ),
+              Container(
+                width: double.infinity,
+              ),
+              Text(
+                'Michaelz Omoakin',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Title',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 40.0),
+              ),
+              Text(
+                'FRONTEND ENGINEER',
+                style: TextStyle(
+                    color: Colors.teal.shade100, // Colors.teal[100] OR
+                    // Colors.teal.shade100
+                    fontFamily: 'Body',
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2.5), // letter spacing defines d space
+                // between each letter
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

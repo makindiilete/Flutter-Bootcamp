@@ -1,5 +1,0 @@
-1-  Enable developer option on your android device
-2-  From the developer option, enable USB Debugging
-3-  Connect your phone with USB
-4-  A prompt should show asking your to allow USB Debugging
-5-  Inside android studio, select your device and click play button

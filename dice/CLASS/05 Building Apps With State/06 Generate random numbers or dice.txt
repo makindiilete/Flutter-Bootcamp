@@ -1,0 +1,6 @@
+Now instead of hard coding a new number manually, we want to generate a number at random.
+To generate a random number, we will be using the 'math' libary baked into dart..
+And from the 'math' library, we will be making use of the 'Random' class..
+
+https://api.flutter.dev/flutter/dart-math/Random-class.html
+

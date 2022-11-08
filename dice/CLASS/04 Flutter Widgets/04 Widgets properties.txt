@@ -1,0 +1,35 @@
+class MiCard extends StatelessWidget {
+  const MiCard({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.green,
+        body: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: NetworkImage('https://cdn.pixabay'
+                    '.com/photo/2015/01/15/13/06/woman-600238_1280.jpg'),
+              ),
+              Container(
+                width: double.infinity,
+              ),
+              Text(
+                'Michaelz Omoakin',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 40.0),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
